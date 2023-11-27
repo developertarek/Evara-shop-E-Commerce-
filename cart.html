@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evara shop</title>
+  <!-- favicon for evara  -->
+  <link rel="icon" href="./images/favicon.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+
+    <style>
+        .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+}
+
+    </style>
+
+</head>
+
+<body>
+
+    <section id="header">
+         <a href="./index.html"><img src="./images/logo.svg" class="logo" alt="logo"></a>
+          <div>
+              <ul id="navbar">
+                  <li><a  href="index.html">Home</a></li>
+                  <li><a href="shop.html">Shop</a></li>
+                  <li><a href="about.html">Support</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="./login/login_form.php">Login </a></li>
+                  <li id="lg-bag"><a class="active" href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
+                  <a href="#" id="close"><i class="far fa-times"></i></a>
+              </ul>
+          </div>
+          <div id="mobile">
+              <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+              <i id="bar" class="fas fa-outdent"></i>
+          </div>
+      </section>
+
+      <div class="sproduct-header">
+        <h2>#Products cart</h2>
+        <marquee  loop="-1" scrollamount="5" width="20%">
+            <p>Review products and make payment</p>
+        </marquee>
+      </div>
+      <section id="cart" class="section-p1">
+        <table width="100%">
+            <thead>
+                <tr>
+                    
+                    <td>Image</td>
+                    <td>Product</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                    <td>Subtotal</td>
+                    <td>Remove</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    
+                    <td><img src="./images/a1.jpg" alt=""></td>
+                    <td>Outdoor Adventure pant</td>
+                    <td>Tk.700</td>
+                    <td><input type="number" value="1"></td>
+                    <td>Tk.700</td>
+                    <td><a href=""><i class="far fa-times-circle remove" style="color: rgb(60, 164, 130);"></i></a></td>
+                </tr>
+                <tr>
+                   
+                    <td><img src="./images/f2.jpg" alt=""></td>
+                    <td>Timeless Oxford Brogues</td>
+                    <td>Tk.2,000</td>
+                    <td><input type="number" value="1"></td>
+                    <td>Tk.2,000</td>
+                    <td><a href="#"><i class="far fa-times-circle remove" style="color: rgb(60, 164, 130);" ></i></a></td>
+                </tr>
+                <tr>
+                   
+                    <td><img src="./images/women-f1.webp" alt=""></td>
+                    <td>Rigo Women Camel Brown Fleece <br> Biker Jacket</td>
+                    <td>Tk.1800</td>
+                    <td><input type="number" value="1"></td>
+                    <td>Tk.1800</td>
+                    <td><a href="#"><i class="far fa-times-circle remove" style="color: rgb(60, 164, 130);"></i></a></td> 
+                </tr>
+                <tr>
+                   
+                    <td><img src="./images/c2.jpg" alt=""></td>
+                    <td>Relaxed Fit T-Shirt
+                    </td>
+                    <td>Tk.1,000</td>
+                    <td><input type="number" value="1"></td>
+                    <td>Tk.1,000</td>
+                    <td><a href="#"><i class="far fa-times-circle" style="color: rgb(60, 164, 130);"></i></a></td> 
+                </tr>
+                <tr>
+                   
+                    <td><img src="./images/i1.jpg" alt=""></td>
+                    <td>Men's jacket</td>
+                    <td>Tk.1600</td>
+                    <td><input type="number" value="1"></td>
+                    <td>Tk.1600</td>
+                    <td><a href="#"><i class="far fa-times-circle" style="color: rgb(60, 164, 130);"></i></a></td> 
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="cart-add" class="section-p1">
+        <div id="coupon">
+            <h3>Apply Coupon</h3>
+            <div>
+                <input type="text"  id="coupon-input"  placeholder="Enter Your Coupon. if any">
+                <button class="normal" id="apply-coupon-btn">Apply</button>
+            </div>
+        </div>
+        <div id="subtotal">
+            <h3>Cart Totals</h3>
+            <table>
+                <tr>
+                    <td>Cart Subtotal</td>
+                    <td id="subtotal-value">Tk.7,100</td>
+                </tr>
+                <tr>
+                <td>Shipping</td>
+                <td>Free</td>
+                </tr>
+                <tr>
+                    <td><strong>Total</strong></td>
+                    <td id="total-value"><strong>Tk.7,100</strong></td>
+                </tr>
+            </table>
+            <!-- <button class="normal">Proceed to checkout</button> -->
+           <div class="modal-btn">
+            <button type="button" class="btn " id=" proced-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Proceed to checkout
+              </button>
+           </div>
+              
+              <!-- Modal using bootstrap -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      
+                      <button type="button" class="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                     
+                        <div class="container">
+                            <h2 class="text-center">Pay Invoice</h2>
+                             <div class="text-center m-3">
+                                <img src="./images/payment-method.png" class="img-fluid"alt="payment img">
+                             </div>
+                            <form id="payment-form" onsubmit="handleFormSubmission()">
+                              <div class="mb-3">
+                                <label for="cardName" class="form-label">Cardholder Name</label>
+                                <input type="text" class="form-control" id="cardName" placeholder="Enter cardholder name">
+                              </div>
+                          
+                              <div class="mb-3">
+                                <label for="cardNumber" class="form-label">Card Number</label>
+                                <input type="text" class="form-control" id="cardNumber" placeholder="Enter card number">
+                              </div>
+                          
+                              <div class="mb-3">
+                                <label for="expirationDate" class="form-label">Expiration Date</label>
+                                <input type="date" class="form-control" id="expirationDate">
+                              </div>
+                          
+                              <div class="mb-3">
+                                <label for="cvv" class="form-label">CVV</label>
+                                <input type="number" class="form-control" id="cvv" placeholder="Enter CVV">
+                              </div>
+                              <button type="submit" id="make-payment-btn" class="btn w-100" >Make payment</button>
+                              
+                            </form>
+                          </div>
+                        
+                    </div>
+                  
+                  </div>
+                </div>
+              </div>
+            
+            
+            
+        </div>
+</section>
+ 
+<section id="feature" class="section-p1">
+    <div class="fe-box">
+        <img src="./images/free shipping.webp" alt="">
+        <h6>Free Shipping</h6>
+    </div>
+    <div class="fe-box">
+        <img src="./images/online order.webp" alt="">
+        <h6>Online Order</h6>
+    </div>
+    <div class="fe-box">
+        <img src="./images/save money.webp" alt="">
+        <h6>Save Money</h6>
+    </div>
+    <div class="fe-box">
+        <img src="./images/promotions.webp" alt="">
+        <h6>Promotions</h6>
+    </div>
+    <div class="fe-box">
+        <img src="./images/happy sell.webp" alt="">
+        <h6>Happy Sell</h6>
+    </div>
+    <div class="fe-box">
+        <img src="./images/24 support.webp" alt="">
+        <h6>F24/7 Support</h6>
+    </div>
+</section>
+    <section id="newsletter" class="section-p1 ">
+        <div class="newstext">
+             <h4>Send Email For Newsletters</h4>
+             <p>Get E-mails Updates about our latest shop and <span>special offers.</span></p>
+        </div>
+        <form onsubmit="newsletteremailSend(); reset(); return false;">
+            <input id="newsletterMail" type="text" name="email" placeholder="Your email address" required>
+            <button type="submit" id="newsletterBtn" class="normal">let's Deal</button>
+          </form>
+    </section>
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="./images/logo.svg" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> Ashulia Model town, Savar,Dhaka</p>
+            <p><strong>Phone:</strong>+8801704355496</p>
+            <p><strong>Mail:</strong>tarek@gmail.com</p>
+            <div class="icon">
+                <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.pinterest.com/"><i class="fab fa-pinterest-p"></i></a>
+                <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+            
+                
+            </div>
+        </div>
+    </div>
+
+        <div class="col">
+            <h4>About</h4>
+            <a href="./about.html">About Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="./about.html">Privacy Policy</a>
+            <a href="./about.html">Terms & Conditions</a>
+            <a href="./contact.html">Contact Us</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="./login/login_form.php">Login</a>
+            <a href="./cart.html">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="./cart.html">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row ">
+                <img src="./images/app-store.png" alt="">
+                <img src="./images/play-store.png" alt="">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <div class="payment-row">
+                <img src="./images/payment-method.png" alt="">
+            </div>
+        </div class="copyright">
+            <p>2023 Website made by Tarek, Shahriar and Sohan <br> <br>
+                ©Coppyright : all rights reserved
+            </p>
+        <div>
+
+        </div>
+    </footer>
+
+
+    <script src="./script.js"></script>
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- for alert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script>
+        document.getElementById('apply-coupon-btn').addEventListener('click', function() {
+            applyCoupon();
+        });
+        function applyCoupon() {
+            var couponInput = document.getElementById('coupon-input').value;
+            if (couponInput.toLowerCase() === 'tarek') {  
+                var currentTotal = parseFloat(document.getElementById('total-value').innerText.replace('Tk.', '').replace(',', ''));
+                var discount = currentTotal * 0.10;
+                var newTotal = currentTotal - discount;
+                // Update the total value in the HTML
+                document.getElementById('total-value').innerText = 'Tk.' + newTotal.toFixed(2);
+                swal("Coupon code applied", " You get 10% discount.. ", "success");
+            } else {
+                swal("error", "invalid coupon code", "warning");
+            }
+        }
+    </script>
+     
+</body>
+
+</html>
